@@ -3,18 +3,17 @@ var katzDeliLine = [];
 function takeANumber(katzDeliLine, newName) {
 
     katzDeliLine.push(`${newName}`);
-    newArray[i] = (`Welcome, ${newName[i]}. You are number ${katzDeliLine[i]} in line.`)
-    i++;
+    return `Welcome, ${newName[i]}. You are number ${katzDeliLine.length} in line.`
     }
-  return newArray;
-}
 
-function nowServing(firstName) {
-  for (let i = firstName.length; i > 0; i--) {
-    firstName.shift(i > 0 ? `Currently serving ${firstName}.` : "There is nobody waiting to be served!");
-    }
-  return firstName;
-}
+function nowServing(katzDeliLine) {
+  if (1 < katzDeliLine.length) {
+    return "There is nobody waiting to be served!"
+  } else {
+    var firstPerson = katzDeliLine.shift();
+    return `Currently serving ${firstPerson}.`
+  }
+  }
 
 
 /*global describe, it
