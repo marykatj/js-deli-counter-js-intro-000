@@ -1,8 +1,8 @@
 var katzDeliLine = [];
+
 function takeANumber(katzDeliLine, newName) {
-  let i = 0
-  var newArray = [];
-  while (i < katzDeliLine.length) {
+
+    katzDeliLine.push(`${newName}`);
     newArray[i] = (`Welcome, ${newName[i]}. You are number ${katzDeliLine[i]} in line.`)
     i++;
     }
